@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    height:100vh;
+  
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    margin-top:20rem;
+    padding:10px;
+    margin:auto;
+    
+    
+    
+}
+.button{
+    
+    border-radius:15px;
+    padding:45px;
+    height:5px;
+    width:10rem;
+    overflow:hidden;
+    border:none;
+}
+.button::before{
+    content:'Pasa por encima';
+    position:center;
+    font-size:1rem;
+    top:50%;
+    left:50%;
+    transform:translate(-50% -50%);
+    transition:.2s ease;
+    
+    
+}
+.button::after{
+    content:'Hecho!';
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size:1rem;
+    transform:translate(-50% -50%);
+    opacity:0;
+    transition:.2s ease;
+    
+   
+    
+}
+.button:hover::before{
+    transform:translate(-50% -50%) scale(3);
+    opacity:0;
+    
+}
+.button:hover::after{
+    transform:translate(-50% -50%) scale(3);
+    opacity:1;
+    background-color:green;
+    border-radius: 10px;
+    padding:2rem;
+    
+    
+}
